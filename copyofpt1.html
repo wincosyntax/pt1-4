@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>PT 1</title>
+  <link rel="stylesheet" href="pt1.html">
+    <style>
+textarea {
+height:60px;
+width:1000px;
+}
+hr {
+background-color:9a6dbe;
+}
+input {
+height:25px;
+width:100px;
+padding:3px;
+margin:2px;
+}
+p {
+font-family:times-new-roman;
+font-size:10px;
+color:#601a3e;
+text-align:center;
+}    
+    
+  
+.jred {
+color:#601a3e;
+text-align:center;
+font-size:10px;
+}
+  
+header {
+margin:0px;
+padding:10px;
+text-align:center;
+color:white;
+width:100%;
+height: 100px;
+background-color: #e44b8d;
+animation-name:pulse;
+animation-duration:1s;
+}
+  
+  header:hover {
+background-color: #7f3667;
+}
+  
+  p {
+    font-family: verdana; 
+    font-size: 35px;
+  }
+    
+    </style>
+  
+</head>
+
+<body background-color="#fbbede">
+<header>
+<h1>Performance Task 1 ICT II</h1>
+<br>
+<h2>Quarter 4</h2>
+</header>
+<hr>
+<br><br>
+
+  <script>
+  
+  function mingyu()
+  {
+   //retrieving data
+    var fullname=document.getElementById("fullname").value;
+    var section=document.getElementById("section").value;
+    var answers=document.getElementById("answers").value;
+    
+  //storing data
+    var fname=localStorage.setItem("fullname", fullname);
+    var sec=localStorage.setItem("section", section);
+    var ans=localStorage.setItem("answers", answers);
+  }    
+  
+
+@keyframes pulse {
+0% { 
+transform: scale(1);
+}
+
+70% {
+transform: scale(0.95);
+}
+
+100% {
+transform: scale(1);
+}
+}
+
+  </script>
+<table>
+<form>
+  <p> <b>Full Name: </b>
+  <input type="text" id="fullname" name="fname">
+    <b>Section: </b> 
+  <input type="text" id="section" name="sec"><br><br>
+  
+    <b>  How is your experience in Science Highschool?</b><br>
+  <input type="radio" id="answers" name="ans">
+  <label for="answers">Very Satisfied</label><br>
+    <input type="radio" id="answers" name="ans">
+  <label for="answers">Satisfied</label><br>
+    <input type="radio" id="answers" name="ans">
+  <label for="answers">Neutral</label><br>
+    <input type="radio" id="answers" name="ans">
+  <label for="answers">Unsatisfied</label><br>
+    <input type="radio" id="answers" name="ans">
+  <label for="answers">Very Unsatisfied</label><br><br>
+  
+  On a scale of 1-10, did you experience any stress in this quarter? (1 is the least, 10 is the most)
+    <select id="answers" name="ans">
+    <option value="1">1</option>
+    <option value="2">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+     <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+  </select>
+  <br><br>
+   
+  Would you like to try any activities in this school? If so, write if Yes and specify.<br>
+  Enter Here: <input type="text" id="answers" name="ans">
+  <br><br>
+  
+  Are there any snacks that you would like to taste in this school for our group?
+  <br>
+  Enter Here: <input type="text" id="answers" name="ans">
+  <br><br>
+  
+  What type of flavor of food do you prefer?<br>
+    <input type="checkbox" id="answer" name="ans">
+  <label for="bitter"> Bitter </label><br>
+    <input type="checkbox" id="answer" name="ans">
+  <label for="Salty"> Salty </label><br>
+    <input type="checkbox" id="answer" name="ans">
+  <label for="Savory"> Savory </label><br>
+    <input type="checkbox" id="answer" name="ans">
+  <label for="Sour"> Sour </label><br>
+    <input type="checkbox" id="answer" name="ans">
+  <label for="Sweet"> Sweet </label><br>
+  <br>
+  
+  What genre would you like?<br>
+   <input type="checkbox" id="answer" name="ans">
+  <label for="American"> American </label><br>
+    <input type="checkbox" id="answer" name="ans">
+  <label for="Salty"> Filipino </label><br>
+    <input type="checkbox" id="answer" name="ans">
+  <label for="Savory"> Indian </label><br>
+    <input type="checkbox" id="answer" name="ans">
+  <label for="Sour"> Italian </label><br>
+    <input type="checkbox" id="answer" name="ans">
+  <label for="Sweet"> Japanese </label><br>
+   <input type="checkbox" id="answer" name="ans">
+  <label for="Sweet"> Korean </label><br>
+  Other (Please comment it on the comment area)
+  <br><br>
+  
+  Are there snacks that you are willing to taste?<br>
+  Enter here: <input type="text" id="answers" name="ans">
+  <br><br>
+  
+  If you have any allergies, please input here: <br>
+  <input type="text" id="answers" name="ans">
+  <br><br>
+  
+  Are there any recommendations for the people who are willing to sell goods?
+  <br>
+  Enter here: <input type="text" id="answers" name="ans">
+  <br><br>
+  
+  Please write your comments or concerns here. Thank you:
+  <br>
+  <textarea id="answers" name="ans"></textarea>
+  <br><br>
+  
+  <input type="submit" value="Submit Here" onclick="mingyu" class="jred"></input>
+</p>
+</form>
+</table>
+</body>
+<script src="pt1.js"></script>
+</html>
